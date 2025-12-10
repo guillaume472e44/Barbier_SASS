@@ -1,0 +1,108 @@
+@use "../base";
+
+body {
+  font-family: base.$base-font;
+}
+
+/************************************************************************ Global */
+.section {
+  &-title {
+    font-family: base.$title-font;
+    font-size: base.$fs-36;
+    margin-bottom: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 6px;
+  }
+  &-title img {
+    width: 50px;
+    margin-left: 8px;
+  }
+  &-subtitle {
+    font-size: base.$fs-20;
+    margin-bottom: 72px;
+    text-align: center;
+  }
+}
+.heading {
+  &-h3 {
+    font-size: base.$fs-20;
+    display: flex;
+    align-items: center;
+  }
+  &-h3 img {
+    width: 36px;
+    margin-right: 6px;
+  }
+  &-h4 {
+    font-size: base.$fs-18;
+  }
+  &-h3,
+  &-h4 {
+    font-family: base.$title-font;
+    text-transform: uppercase;
+  }
+}
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/************************************ Responsive */
+@media (max-width: 1024px) {
+  .section {
+    &-title {
+      font-size: base.$fs-30;
+      img {
+        width: 42px;
+      }
+    }
+    &-subtitle {
+      font-size: base.$fs-20;
+      margin-bottom: 52px;
+    }
+  }
+  .heading {
+    &-h3 {
+      font-size: base.$fs-18;
+      img {
+        width: 30px;
+      }
+    }
+  }
+  .container {
+    max-width: 700px;
+  }
+}
+@media (max-width: 750px) {
+  .section {
+    &-title {
+      font-size: base.$fs-24;
+      img {
+        width: 30px;
+      }
+    }
+    &-subtitle {
+      font-size: base.$fs-16;
+    }
+  }
+  .heading-h3 {
+    font-size: base.$fs-16;
+  }
+}
+@media (max-width: 525px) {
+  .section {
+    &-title {
+      font-size: base.$fs-20;
+    }
+    &-subtitle {
+      font-size: base.$fs-14;
+    }
+  }
+  .heading-h3 img {
+    width: 20px;
+  }
+}

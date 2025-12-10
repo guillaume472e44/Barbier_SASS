@@ -1,0 +1,136 @@
+@use "../base";
+
+/************************************************************************ Hero */
+
+.main {
+  &-title {
+    font-family: base.$title-font;
+    font-size: base.$fs-72;
+    color: base.$main-white;
+    font-weight: 900;
+  }
+  &-subtitle {
+    font-size: base.$fs-30;
+    color: base.$shade-white;
+    margin-bottom: 28px;
+    font-weight: 300;
+  }
+}
+.hero {
+  min-height: 750px;
+  padding-top: 200px;
+  background-image: url(../assets/images/hero-background.jpg);
+  background-size: cover;
+  background-position: 50% 10%;
+  position: relative;
+  text-align: center;
+  &-link {
+    min-width: 155px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    color: base.$main-black;
+    span {
+      text-decoration: underline dotted;
+      text-decoration-color: base.$main-black;
+      text-underline-offset: 4px;
+      position: relative;
+      bottom: 2px;
+      pointer-events: none;
+    }
+    img {
+      margin-left: 8px;
+      width: 24px;
+      pointer-events: none;
+    }
+    &-1 {
+      background-color: base.$main-yellow;
+      margin-right: 6px;
+    }
+    &-1:hover {
+      background-color: base.$dark-yellow;
+    }
+    &-2 {
+      background-color: base.$main-white;
+      margin-left: 6px;
+    }
+    &-2:hover {
+      background-color: base.$shade-white;
+    }
+  }
+}
+.push-down-hero {
+  display: none;
+}
+
+// .hero-link span,
+// .hero-link img {
+//   pointer-events: none;
+// }
+
+/************************************ Responsive */
+@media (max-width: 1024px) {
+  .hero {
+    min-height: 600px;
+    padding-top: 145px;
+  }
+  .main-title {
+    font-size: base.$fs-50;
+  }
+  .main-subtitle {
+    font-size: base.$fs-30;
+  }
+}
+@media (max-width: 750px) {
+  .main-title {
+    font-size: base.$fs-36;
+  }
+  .main-subtitle {
+    font-size: base.$fs-24;
+  }
+  .hero-link {
+    min-width: 110px;
+    padding: 8px 6px;
+    font-size: base.$fs-14;
+    img {
+      display: none;
+    }
+  }
+  .push-down-hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: base.$main-black;
+    border: 1px solid base.$main-white;
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    img {
+      width: 20px;
+      pointer-events: none;
+    }
+  }
+}
+@media (max-width: 525px) {
+  .hero {
+    padding-top: 125px;
+    min-height: 500px;
+  }
+  .hero-link {
+    padding: 6px;
+  }
+  .main-title {
+    font-size: base.$fs-24;
+  }
+  .main-subtitle {
+    font-size: base.$fs-20;
+  }
+}

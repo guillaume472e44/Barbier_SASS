@@ -1,0 +1,77 @@
+@use "../base";
+
+@mixin card {
+  width: 100%;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+  padding: 36px 36px 96px;
+  background-color: base.$main-yellow;
+  border-radius: 8px;
+}
+@mixin card-title {
+  font-family: base.$title-font;
+  font-size: base.$fs-30;
+  margin-bottom: 48px;
+  text-transform: uppercase;
+  color: base.$main-black;
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 36px;
+    margin-left: 12px;
+    transform: rotateY(180deg);
+  }
+}
+@mixin card-prestations {
+  list-style-type: none;
+  h4 {
+    margin-bottom: 8px;
+  }
+  p {
+    font-weight: 500;
+    line-height: 1.4;
+  }
+  li:not(:last-of-type) {
+    margin-bottom: 28px;
+  }
+}
+
+@mixin team-card {
+  flex-shrink: 0;
+  width: 300px;
+  color: base.$main-yellow;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+  margin: 20px;
+  border-radius: 8px;
+  background-color: base.$main-black;
+  background-image: repeating-linear-gradient(
+      90deg,
+      hsla(57, 0%, 42%, 0.09) 0px,
+      hsla(57, 0%, 42%, 0.09) 1px,
+      transparent 1px,
+      transparent 60px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      hsla(57, 0%, 42%, 0.09) 0px,
+      hsla(57, 0%, 42%, 0.09) 1px,
+      transparent 1px,
+      transparent 60px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      hsla(57, 0%, 42%, 0.09) 0px,
+      hsla(57, 0%, 42%, 0.09) 1px,
+      transparent 1px,
+      transparent 10px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      hsla(57, 0%, 42%, 0.09) 0px,
+      hsla(57, 0%, 42%, 0.09) 1px,
+      transparent 1px,
+      transparent 10px
+    ),
+    linear-gradient(90deg, rgb(20, 20, 20), rgb(20, 20, 20));
+}
