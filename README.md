@@ -2,4 +2,4 @@
 
 Site factice créé dans le but de s'exercer avec le préprocesseur SASS.
 
-_Maquette du projet tirée du parcours Full-Stack, formation [Ecole du web](https://www.ecole-du-web.net/)._
+_Maquette du projet tirée de la formation Full-Stack, [Ecole du web](https://www.ecole-du-web.net/)._
